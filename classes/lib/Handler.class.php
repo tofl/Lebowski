@@ -9,14 +9,47 @@ class Handler
     private function __construct() {
         if (!isset($_GET['page']) OR empty($_GET['page'])) {
             $this->_page = 'homepage';
+            return;
+        }
+
+        if ($this->pageExists($_GET['page'])) {
+            $this->_page = $_GET['page'];
+        } else {
+            $this->_page = '404';
         }
     }
+
 
     public static function getInstance() {
         if (empty(self::$_instance)) {
             self::$_instance = new Handler();
         }
         return self::$_instance;
+    }
+
+
+    public function pageExists(string $page) {
+        $files = scandir('webroot/pages');
+
+        if (in_array($page . '.php', $files)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function getPage() {
+        return $this->_page . '.php';
+    }
+
+    public function pageTitle() {
+        switch ($this->_page) {
+            case 'homepage':
+                return 'Accueil';
+            case '404' :
+                return 'Page non trouvée';
+        }
     }
 
 }
