@@ -2,6 +2,11 @@
 
 include('classes/classes.php');
 
-$handler = Handler::getInstance();
+define('ROOT', 'http://localhost/Lebowski/webroot/');
 
+$handler = Handler::getInstance();
 $page = 'pages/' . $handler->getPage();
+
+$session = new Session();
+
+session_start();

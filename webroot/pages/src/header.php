@@ -1,14 +1,17 @@
-<ul class="nav nav-justified">
+<ul class="nav nav-justified main_nav">
     <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link" href="<?= ROOT; ?>">Accueil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Créer une équipe</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">Classement des équipes</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">Classement des joueurs</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="?page=login">Connexion</a>
     </li>
 </ul>

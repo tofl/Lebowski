@@ -29,7 +29,7 @@ class Handler
 
 
     public function pageExists(string $page) {
-        $files = scandir('webroot/pages');
+        $files = scandir('pages');
 
         if (in_array($page . '.php', $files)) {
             return true;
@@ -47,6 +47,8 @@ class Handler
         switch ($this->_page) {
             case 'homepage':
                 return 'Accueil';
+            case 'login' :
+                return 'Connexion';
             case '404' :
                 return 'Page non trouvée';
         }
