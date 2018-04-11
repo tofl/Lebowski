@@ -15,8 +15,12 @@
         <div class="main_wrapper">
             <?php
                 include('pages/src/header.php');
-                include($page);
             ?>
+            <div class="page">
+                <?php
+                    include($page);
+                ?>
+            </div>
         </div>
     </body>
 </html>
