@@ -49,6 +49,8 @@ class Handler
                 return 'Accueil';
             case 'login' :
                 return 'Connexion';
+            case 'signup' :
+                return 'Inscription';
             case '404' :
                 return 'Page non trouvée';
         }

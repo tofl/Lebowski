@@ -3,7 +3,7 @@
         <a class="nav-link" href="<?= ROOT; ?>">Accueil</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Créer une équipe</a>
+        <a class="nav-link" href="?page=signup">Créer une équipe</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="#">Classement des équipes</a>
