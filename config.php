@@ -10,3 +10,11 @@ $page = 'pages/' . $handler->getPage();
 $session = new Session();
 
 session_start();
+
+$session = $_SESSION['session'];
+
+/*
+echo '<pre>';
+print_r($_SESSION);
+echo '</pre><br />';
+*/
