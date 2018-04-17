@@ -25,8 +25,6 @@ if ($count != 0) {
         $user = new User($data['id'], $data['name'], $data['phrase'], $data['image'], $data['score_total']);
         session_start();
         $_SESSION['session'] = new Session($user);
-        var_dump($_SESSION['session']);
-        die();
 
         header('Location: http://localhost/Lebowski/webroot/');
     } else {

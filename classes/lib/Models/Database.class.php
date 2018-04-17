@@ -19,7 +19,7 @@ class Database
     }
 
     public function __sleep() {
-        return array('_host', '_dbname', '_username', '_password');
+        return array('_host', '_dbname', '_user', '_password');
     }
 
 }
