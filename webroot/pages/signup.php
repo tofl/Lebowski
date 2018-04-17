@@ -1,4 +1,4 @@
-<h1 class="login_title">Inscription</h1>
+<h1 class="login_title">Créer une équipe</h1>
 
 <div class="signup_form">
 

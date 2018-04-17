@@ -7,7 +7,7 @@ class User
     private $_motto;
     private $_image;
     private $_score;
-    private $_teams;
+    #private $_teams;
 
     public function __construct($id, $name, $phrase, $image, $score) {
         $this->_id = $id;
@@ -16,7 +16,7 @@ class User
         $this->_image = $image;
         $this->_score = $score;
 
-        $this->_teams = new Teams();
+        #$this->_teams = new Teams();
     }
 
     /**
@@ -59,9 +59,9 @@ class User
         return $this->_score;
     }
 
-    public function getRank() {
-        return $this->_teams->rankPosition();
-    }
+    #public function getRank() {
+    #    return $this->_teams->rankPosition();
+    #}
 
 
 }

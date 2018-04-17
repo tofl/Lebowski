@@ -62,4 +62,5 @@ session_start();
 
 $_SESSION['session'] = new Session($user);
 
+var_dump($_SESSION);
 header('Location: http://localhost/Lebowski/webroot/');

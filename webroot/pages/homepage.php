@@ -8,7 +8,7 @@
             <br />
             <?= $session->user->getMotto(); ?>
             <br />
-            <?= $session->user->getRank(); ?>
+            <!--<?= $session->user->getRank(); ?>-->
         </div>
     </div>
 </div>

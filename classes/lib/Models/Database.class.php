@@ -14,6 +14,7 @@ class Database
         $this->_db = new PDO('mysql:host=' . $host . ';dbname=' . $dbname, $user, $password);
     }
 
+    /**
     public function __wakeup() {
         $this->_db = new PDO('mysql:host=' . $this->_host . ';dbname=' . $this->_dbname, $this->_user, $this->_password);
     }
@@ -21,5 +22,6 @@ class Database
     public function __sleep() {
         return array('_host', '_dbname', '_user', '_password');
     }
+     **/
 
 }
