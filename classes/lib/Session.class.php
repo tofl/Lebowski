@@ -25,4 +25,8 @@ class Session
         $this->user = null;
     }
 
+    public function user() {
+        return $this->user;
+    }
+
 }

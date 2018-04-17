@@ -51,6 +51,8 @@ class Handler
                 return 'Connexion';
             case 'signup' :
                 return 'Inscription';
+            case 'add_player' :
+                return 'Ajouter un joueur';
             case '404' :
                 return 'Page non trouvée';
         }

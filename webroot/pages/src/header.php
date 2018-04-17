@@ -5,7 +5,7 @@
     <li class="nav-item">
         <?php
             if ($session->isLoggedIn()) {
-                echo '<a class="nav-link" href="?page=add_user">Ajouter un joueur</a>';
+                echo '<a class="nav-link" href="?page=add_player">Ajouter un joueur</a>';
             } else {
                 echo '<a class="nav-link" href="?page=signup">Créer une équipe</a>';
             }

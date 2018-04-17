@@ -13,8 +13,7 @@ session_start();
 
 $session = $_SESSION['session'];
 
-/*
+
 echo '<pre>';
-print_r($_SESSION);
+var_dump($session->isLoggedIn());
 echo '</pre><br />';
-*/

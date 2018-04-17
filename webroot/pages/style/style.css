@@ -6,7 +6,10 @@
 }
 
 .page {
-    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid black;
+    width: 950px;
+    margin: auto;
 }
 
 .main_nav {
@@ -26,4 +29,8 @@
 
 .upload_image {
     max-width: 500px;
+}
+
+.team_photo {
+    max-width: 260px;
 }
