@@ -1,14 +1,14 @@
 <div class="team_info">
     <div class="basic_info">
         <div class="team_photo">
-            <img src="<?= $session->user->getImage(); ?>" alt="<?= $session->user->getName(); ?>" class="team_photo" />
+            <img src="<?= $currentUser->getImage(); ?>" alt="<?= $currentUser->getName(); ?>" class="team_photo" />
         </div>
         <div class="team_info">
-            <?= $session->user->getName(); ?>
+            <?= $currentUser->getName(); ?>
             <br />
-            <?= $session->user->getMotto(); ?>
+            <?= $currentUser->getMotto(); ?>
             <br />
-            <!--<?= $session->user->getRank(); ?>-->
+            <!--<? $currentUser->getRank(); ?>-->
         </div>
     </div>
 </div>

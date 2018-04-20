@@ -7,16 +7,21 @@ class User
     private $_motto;
     private $_image;
     private $_score;
-    #private $_teams;
+    private $_teams;
 
-    public function __construct($id, $name, $phrase, $image, $score) {
+    public function __construct($id) {
         $this->_id = $id;
-        $this->_name = $name;
-        $this->_motto = $phrase;
-        $this->_image = $image;
-        $this->_score = $score;
+        $this->_teams = new Teams();
 
-        #$this->_teams = new Teams();
+        $teams = new Teams();
+        $userData = $teams->getTeamInfo($id);
+
+        $this->_name = $userData['name'];
+        $this->_motto = $userData['phrase'];
+        $this->_image = $userData['image'];
+        $this->_score = $userData['score_total'];
+
+        $this->_teams = new Teams();
     }
 
     /**

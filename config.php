@@ -7,14 +7,18 @@ define('ROOT', 'http://localhost/Lebowski/webroot/');
 $handler = Handler::getInstance();
 $page = 'pages/' . $handler->getPage();
 
-$session = new Session();
-
 session_start();
 
-$session = $_SESSION['session'];
+if (empty($_SESSION['session'])) {
+    $session = 0;
+    $currentUser = null;
+} else {
+    $session = $_SESSION['session'];
+    $currentUser = new User($session);
+}
 
 /*
 echo '<pre>';
-var_dump($session->isLoggedIn());
+var_dump($session);
 echo '</pre><br />';
 */
