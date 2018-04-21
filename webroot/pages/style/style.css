@@ -30,6 +30,39 @@
     max-width: 500px;
 }
 
-.team_photo {
+.avatar {
     max-width: 260px;
+    max-height: 300px;
+}
+
+.basic_info {
+    display: flex;
+    justify-content: center;
+}
+
+.team_photo {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info span {
+    padding-bottom: 10px;
+}
+
+.new_game_button {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#player_name {
+    width: 200px;
 }
