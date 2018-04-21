@@ -2,9 +2,7 @@
 include('../../classes/classes.php');
 session_start();
 
-$session = $_SESSION['session'];
-
-$session->logOut();
+unset($_SESSION['session']);
 
 
 header('Location: http://localhost/Lebowski/webroot/');

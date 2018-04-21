@@ -8,7 +8,6 @@ $handler = Handler::getInstance();
 $page = 'pages/' . $handler->getPage();
 
 session_start();
-
 if (empty($_SESSION['session'])) {
     $session = 0;
     $currentUser = null;

@@ -23,7 +23,14 @@ class Teams extends Database
 
         $results = $rankedTeams->fetchAll();
 
-        var_dump($results);
+        var_dump($results); // ???
+    }
+
+    public function selectPlayersWhere($column, $value) {
+        $statement = $this->_db->prepare('SELECT * FROM players WHERE ' . $column . ' = ? ORDER BY score DESC');
+        $statement->execute([$value]);
+
+        return $statement->fetchAll();
     }
 
 }

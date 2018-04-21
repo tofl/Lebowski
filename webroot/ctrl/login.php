@@ -22,9 +22,9 @@ if ($count != 0) {
 
     if (sha1($password) == $data['password']) {
         include('../../classes/classes.php');
-        $user = new User($data['id'], $data['name'], $data['phrase'], $data['image'], $data['score_total']);
+        #$user = new User($data['id'], $data['name'], $data['phrase'], $data['image'], $data['score_total']);
         session_start();
-        $_SESSION['session'] = new Session($user);
+        $_SESSION['session'] = $data['id'];
 
         header('Location: http://localhost/Lebowski/webroot/');
     } else {

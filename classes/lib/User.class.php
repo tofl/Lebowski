@@ -64,6 +64,11 @@ class User
         return $this->_score;
     }
 
+    public function getPlayers() {
+        $players = $this->_teams->selectPlayersWhere('team_id', $this->_id);
+        return $players;
+    }
+
     #public function getRank() {
     #    return $this->_teams->rankPosition();
     #}
