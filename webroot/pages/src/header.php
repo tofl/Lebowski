@@ -24,7 +24,7 @@
         <a class="nav-link" href="?page=teams_rank">Classement des équipes</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link" href="#">Classement des joueurs</a>
+        <a class="nav-link" href="?page=players_rank">Classement des joueurs</a>
     </li>
     <li class="nav-item">
         <?php

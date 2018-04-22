@@ -57,6 +57,8 @@ class Handler
                 return 'Nouvelle partie';
             case 'teams_rank' :
                 return 'Classement des équipes';
+            case 'players_rank' :
+                return 'Classement des joueurs';
             case '404' :
                 return 'Page non trouvée';
         }

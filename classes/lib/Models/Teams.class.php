@@ -33,6 +33,13 @@ class Teams extends Database
         return $statement->fetchAll();
     }
 
+    public function selectTeamsWhere($column, $value) {
+        $statement = $this->_db->prepare('SELECT name FROM teams WHERE ' . $column . ' = ?');
+        $statement->execute([$value]);
+
+        return $statement->fetchAll();
+    }
+
     public function selectTeams() {
         $statement = $this->_db->prepare('SELECT * FROM teams ORDER BY score_total DESC');
         $statement->execute();

@@ -78,6 +78,16 @@ class User
         return $teams;
     }
 
+    public function getPlayersRanked() {
+        $players = $this->_teams->selectPlayersWhere(true, true);
+        return $players;
+    }
+
+    public function getPlayersTeam($teamId) {
+        $team = $this->_teams->selectTeamsWhere('id', $teamId);
+        return $team[0]['name'];
+    }
+
     #public function getRank() {
     #    return $this->_teams->rankPosition();
     #}
