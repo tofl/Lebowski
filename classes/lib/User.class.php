@@ -9,7 +9,11 @@ class User
     private $_score;
     private $_teams;
 
-    public function __construct($id) {
+    public function __construct($id = 0) {
+        if ($id == 0) {
+            $this->_teams = new Teams();
+            return;
+        }
         $this->_id = $id;
         $this->_teams = new Teams();
 
@@ -67,6 +71,11 @@ class User
     public function getPlayers() {
         $players = $this->_teams->selectPlayersWhere('team_id', $this->_id);
         return $players;
+    }
+
+    public function getTeams() {
+        $teams = $this->_teams->selectTeams();
+        return $teams;
     }
 
     #public function getRank() {

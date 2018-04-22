@@ -55,6 +55,8 @@ class Handler
                 return 'Ajouter un joueur';
             case 'new_game' :
                 return 'Nouvelle partie';
+            case 'teams_rank' :
+                return 'Classement des équipes';
             case '404' :
                 return 'Page non trouvée';
         }

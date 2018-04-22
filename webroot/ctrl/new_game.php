@@ -8,6 +8,10 @@ $total = 0;
 
 $statement = $db->prepare('UPDATE players SET score = score + ? WHERE name = ?');
 foreach ($players as $name => $player) {
+    if (!is_numeric($player)) {
+        header('Location: http://localhost/Lebowski/webroot/?page=new_game&error=1');
+        die();
+    }
     $statement->execute([$player, $name]);
     $total += $player;
 }
