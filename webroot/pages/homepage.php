@@ -21,25 +21,33 @@
                         <th scope="cole">Nom</th>
                         <th scope="cole">Score</th>
                     </tr>
+                </thead>
+                <tbody>
                     <?php
                         $players = $currentUser->getPlayers();
                         $i = 1;
                         foreach ($players as $player) {
                     ?>
                             <tr>
-                                <th><?= $i; ?></th>
-                                <th>?</th>
-                                <th><?= $player['name']; ?></th>
-                                <th><?= $player['score']; ?></th>
+                                <td><?= $i; ?></td>
+                                <td>?</td>
+                                <td><?= $player['name']; ?></td>
+                                <td><?= $player['score']; ?></td>
                             </tr>
                     <?php
                             $i++;
                         }
                     ?>
-                </thead>
+                </tbody>
             </table>
             <?php
-                $players = $currentUser->getPlayers();
+                if (empty($players)) {
+            ?>
+                    <div class="alert alert-primary" role="alert">
+                        Il n'y a pas de joueurs dans cette équipe
+                    </div>
+            <?php
+                }
             ?>
         </div>
     </div>

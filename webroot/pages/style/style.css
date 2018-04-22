@@ -49,18 +49,13 @@
     margin-left: 20px;
     display: flex;
     flex-direction: column;
-    margin-top: 70px;
+    margin-top: 0px;
+    max-width: 300px;
+    word-wrap: break-word;
 }
 
 .info span {
     padding-bottom: 10px;
-}
-
-.new_game_button {
-    margin-left: 40px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 100px;
 }
 
 #player_name {
@@ -69,4 +64,13 @@
 
 .list_players {
     margin-left: 40px;
+}
+
+.input_score {
+    width: 60px;
+}
+
+.score_label {
+    #border: 1px solid red;
+    width: 100px;
 }

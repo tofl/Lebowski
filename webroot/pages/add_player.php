@@ -18,7 +18,7 @@
 
 <form action="ctrl/add_player.php" method="post" class="new_player">
     <label for="player_name">Nom du joueur : </label>
-    <input type="text" name="player_name" id="player_name" class="form-control" placeholder="Nom du joueur" required />
+    <input type="text" name="player_name" id="player_name" class="form-control" placeholder="Nom du joueur" required autofocus />
     <br />
     <button type="submit" class="btn btn-primary">Valider</button>
 </form>

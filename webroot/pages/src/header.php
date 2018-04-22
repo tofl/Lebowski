@@ -15,7 +15,7 @@
         if ($session) {
     ?>
             <li class="nav-item">
-                <a class="nav-link" href="#">Nouvelle partie</a>
+                <a class="nav-link" href="?page=new_game">Nouvelle partie</a>
             </li>
     <?php
         }
