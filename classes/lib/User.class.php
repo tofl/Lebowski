@@ -88,9 +88,29 @@ class User
         return $team[0]['name'];
     }
 
-    #public function getRank() {
-    #    return $this->_teams->rankPosition();
-    #}
+    public function getTeamRank($id) {
+        $teams = $this->_teams->selectTeams();
+
+        $i = 1;
+        foreach ($teams as $team) {
+            if ($team['id'] == $id) {
+                return $i;
+            }
+            $i++;
+        }
+    }
+
+    public function getPlayerRank($id) {
+        $players = $this->getPlayersRanked();
+
+        $i = 1;
+        foreach ($players as $player) {
+            if ($player['id'] == $id) {
+                return $i;
+            }
+            $i++;
+        }
+    }
 
 
 }

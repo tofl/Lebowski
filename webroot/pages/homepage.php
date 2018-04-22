@@ -2,8 +2,7 @@
     <div class="basic_info">
         <div class="team_photo">
             <img src="<?= $currentUser->getImage(); ?>" alt="<?= $currentUser->getName(); ?>" class="avatar" />
-            <!--<? $currentUser->getRank(); ?>-->
-            [Rank]
+            Classement : #<?= $userClass->getTeamRank($session); ?>
         </div>
         <div class="info">
             <span><strong><?= $currentUser->getName(); ?></strong></span>
@@ -16,9 +15,9 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th scope="cole">Nom</th>
                         <th scope="cole">🏆 équipe</th>
                         <th scope="cole">🏆 global</th>
-                        <th scope="cole">Nom</th>
                         <th scope="cole">Score</th>
                     </tr>
                 </thead>
@@ -29,8 +28,8 @@
                         foreach ($players as $player) {
                     ?>
                             <tr>
+                                <th><?= $userClass->getPlayerRank($player['id']); ?></th>
                                 <td><?= $i; ?></td>
-                                <td>?</td>
                                 <td><?= $player['name']; ?></td>
                                 <td><?= $player['score']; ?></td>
                             </tr>

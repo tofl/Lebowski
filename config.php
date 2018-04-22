@@ -9,16 +9,11 @@ $page = 'pages/' . $handler->getPage();
 
 session_start();
 
+$userClass = new User();
+
 if (empty($_SESSION['session'])) {
     $session = 0;
-    $currentUser = null;
 } else {
     $session = $_SESSION['session'];
     $currentUser = new User($session);
 }
-
-/*
-echo '<pre>';
-var_dump($session);
-echo '</pre><br />';
-*/
