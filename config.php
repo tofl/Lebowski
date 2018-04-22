@@ -17,3 +17,7 @@ if (empty($_SESSION['session'])) {
     $session = $_SESSION['session'];
     $currentUser = new User($session);
 }
+
+if (!$session AND $handler->getPage() == 'homepage.php') {
+    header('Location: ' . ROOT . '?page=login');
+}

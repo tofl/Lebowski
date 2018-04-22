@@ -28,9 +28,9 @@
                         foreach ($players as $player) {
                     ?>
                             <tr>
-                                <th><?= $userClass->getPlayerRank($player['id']); ?></th>
+                                <th><?= $player['name']; ?></th>
                                 <td><?= $i; ?></td>
-                                <td><?= $player['name']; ?></td>
+                                <td><?= $userClass->getPlayerRank($player['id']); ?></td>
                                 <td><?= $player['score']; ?></td>
                             </tr>
                     <?php

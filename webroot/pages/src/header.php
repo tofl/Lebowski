@@ -1,7 +1,13 @@
 <ul class="nav nav-justified main_nav">
-    <li class="nav-item">
-        <a class="nav-link" href="<?= ROOT; ?>">Accueil</a>
-    </li>
+    <?php
+        if ($session) {
+    ?>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= ROOT; ?>">Accueil</a>
+            </li>
+    <?php
+        }
+    ?>
     <li class="nav-item">
         <?php
             if ($session) {
